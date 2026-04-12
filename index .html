@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Nebraska UPC Scanner</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg: #0d0d1a;
+    --surface: #13131f;
+    --border: #1e1e35;
+    --green: #00e676;
+    --blue: #4fc3f7;
+    --text: #e8e8f0;
+    --muted: #7070a0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    min-height: 100vh;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0,230,118,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,230,118,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 60px 24px 100px;
+  }
+
+  header {
+    text-align: center;
+    padding-bottom: 60px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 60px;
+  }
+
+  .app-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 8px 20px;
+    margin-bottom: 32px;
+    font-size: 13px;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.05em;
+  }
+
+  .app-badge::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--green);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--green);
+  }
+
+  h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, #fff 0%, var(--green) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .subtitle {
+    color: var(--muted);
+    font-size: 15px;
+  }
+
+  .effective-date {
+    display: inline-block;
+    margin-top: 16px;
+    background: rgba(0,230,118,0.08);
+    border: 1px solid rgba(0,230,118,0.2);
+    color: var(--green);
+    font-size: 13px;
+    font-family: 'DM Mono', monospace;
+    padding: 6px 16px;
+    border-radius: 6px;
+  }
+
+  section {
+    margin-bottom: 48px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 36px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 100%;
+    background: var(--green);
+    border-radius: 3px 0 0 3px;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  h2 .num {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--green);
+    background: rgba(0,230,118,0.1);
+    border: 1px solid rgba(0,230,118,0.2);
+    padding: 2px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+  }
+
+  p { color: #b0b0d0; margin-bottom: 14px; }
+  p:last-child { margin-bottom: 0; }
+
+  ul { list-style: none; margin: 12px 0; }
+
+  ul li {
+    color: #b0b0d0;
+    padding: 6px 0 6px 24px;
+    position: relative;
+  }
+
+  ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--green);
+    font-size: 14px;
+  }
+
+  .highlight-box {
+    background: rgba(0,230,118,0.06);
+    border: 1px solid rgba(0,230,118,0.15);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+
+  .highlight-box p {
+    color: rgba(0,230,118,0.9);
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  strong { color: #e0e0f0; font-weight: 500; }
+
+  .contact-card {
+    background: linear-gradient(135deg, rgba(0,230,118,0.08), rgba(79,195,247,0.05));
+    border: 1px solid rgba(0,230,118,0.2);
+    border-radius: 16px;
+    padding: 36px;
+    text-align: center;
+    margin-top: 60px;
+  }
+
+  .contact-card h2 { justify-content: center; margin-bottom: 12px; }
+  .contact-card p { text-align: center; }
+
+  footer {
+    text-align: center;
+    padding-top: 48px;
+    color: var(--muted);
+    font-size: 13px;
+    font-family: 'DM Mono', monospace;
+    border-top: 1px solid var(--border);
+    margin-top: 60px;
+  }
+
+  a { color: var(--green); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <header>
+    <div class="app-badge">NEBRASKA UPC SCANNER · iOS APP</div>
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">Your privacy is important to us. This policy explains how we handle your data.</p>
+    <div class="effective-date">Effective Date: April 11, 2026</div>
+  </header>
+
+  <section>
+    <h2><span class="num">01</span> Overview</h2>
+    <div class="highlight-box">
+      <p>✓ Nebraska UPC Scanner does not collect, store, or transmit any personal data.</p>
+    </div>
+    <p>Nebraska UPC Scanner is a barcode scanning app designed to validate UPC codes against a locally stored product list. The app is built with privacy by design — everything runs on your device with no external servers involved.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span> Information We Do NOT Collect</h2>
+    <p>We do not collect any of the following:</p>
+    <ul>
+      <li>Personal identification information (name, email, phone number)</li>
+      <li>Location data or GPS coordinates</li>
+      <li>Device identifiers or advertising IDs</li>
+      <li>Camera images or photos</li>
+      <li>Scanned barcode data</li>
+      <li>Usage analytics or crash reports</li>
+      <li>Payment or financial information</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span> Camera Permission</h2>
+    <p>The app requires access to your iPhone camera solely to scan UPC barcodes. This is the core function of the app.</p>
+    <div class="highlight-box">
+      <p>✓ Camera images are processed entirely on your device and are never stored, saved, or transmitted anywhere.</p>
+    </div>
+    <p>You can revoke camera access at any time in <strong>Settings → Nebraska UPC Scanner → Camera</strong>.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span> Local Data Storage</h2>
+    <p>All data used by the app is stored locally on your device only:</p>
+    <ul>
+      <li>The UPC product list is bundled within the app itself</li>
+      <li>Scan history is stored only in your device memory and cleared when the app closes</li>
+      <li>No data is written to iCloud, external servers, or any third-party service</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">05</span> No Internet Connection Required</h2>
+    <p>Nebraska UPC Scanner works completely offline. The app does not make any network requests and does not communicate with any external servers or APIs.</p>
+    <div class="highlight-box">
+      <p>✓ The app functions with no internet connection and sends zero data over any network.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">06</span> Third-Party Services</h2>
+    <p>Nebraska UPC Scanner does not integrate with any third-party analytics, advertising, or data collection services. We do not use:</p>
+    <ul>
+      <li>Google Analytics or Firebase</li>
+      <li>Facebook SDK or any social media SDKs</li>
+      <li>Advertising networks</li>
+      <li>Crash reporting tools</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">07</span> Children's Privacy</h2>
+    <p>Our app does not collect any personal information from anyone, including children under the age of 13. The app is designed for business and retail use.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">08</span> Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated effective date. We encourage you to review this policy periodically.</p>
+  </section>
+
+  <div class="contact-card">
+    <h2>Questions or Concerns?</h2>
+    <p>If you have any questions about this Privacy Policy or how the app handles data, please contact us.</p>
+    <p style="margin-top:16px;">
+      <strong>Nebraska UPC Scanner</strong><br>
+      <a href="mailto:adelalhaddad2013@gmail.com">adelalhaddad2013@gmail.com</a>
+    </p>
+  </div>
+
+  <footer>
+    <p>© 2026 Nebraska UPC Scanner · All rights reserved</p>
+    <p style="margin-top:8px;">This app does not collect personal data.</p>
+  </footer>
+
+</div>
+</body>
+</html>
