@@ -31,6 +31,14 @@ POS "Pay by card" → POS backend creates payment (amount, ref)
 
 Note: Tap to Pay on iPhone requires iPhone XS or newer on a recent iOS, and only works in Apple-supported countries.
 
+## USA quick-test path
+
+1. **Day 1, no code:** install the official **Stripe Dashboard** app on the iPhone and use its built-in Tap to Pay (US-supported) — enter the amount in the app, customer taps their card. Validates card acceptance immediately, but the amount is typed on the phone, not pushed from the POS. (Square POS app is the equivalent no-code option on Square.)
+2. **Integrated test (POS pushes amount to iPhone):** clone Stripe's Terminal example iOS app, add keys + a listener to the loyalty POS backend, request the Apple Tap to Pay entitlement, install via Xcode/TestFlight.
+3. **No-iOS-dev alternative for the full ECR flow:** use a cloud-driven card reader instead of an iPhone — Stripe Reader (server-driven REST) or Square Terminal (Terminal API); the POS pushes the amount to the reader with plain REST calls.
+
+Not usable: consumer wallet apps such as Stripe **Link** ("A smarter way to pay") — they hold the *customer's* cards for paying, have no merchant acceptance entitlement from Apple, and expose no API for a register to push a charge.
+
 ## References
 
 - Stripe: https://stripe.com/terminal/tap-to-pay-on-iphone and https://docs.stripe.com/terminal
